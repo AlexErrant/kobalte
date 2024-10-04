@@ -1,5 +1,5 @@
-import { Combobox } from "@kobalte/core/combobox";
 import { For, createSignal } from "solid-js";
+import { Combobox } from "../../../../packages/core/src/combobox";
 
 import { CaretSortIcon, CheckIcon, CrossIcon } from "../components";
 import style from "./combobox.module.css";
@@ -391,6 +391,7 @@ export function MultipleSelectionExample() {
 				value={values()}
 				onChange={setValues}
 				placeholder="Search some fruits…"
+				allowsCustomValue={true}
 				itemComponent={(props) => (
 					<Combobox.Item item={props.item} class={style.combobox__item}>
 						<Combobox.ItemLabel>{props.item.rawValue}</Combobox.ItemLabel>
